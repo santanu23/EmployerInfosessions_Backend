@@ -1,0 +1,24 @@
+{
+  "name": "employer_infosessions_backend",
+  "version": "1.0.0",
+  "description": "Provides data for info sessions",
+  "main": "scraper.js",
+  "dependencies": {
+    "express": "^4.14.1",
+    "images-scraper": "^2.0.11"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/santanu23/EmployerInfosessions_Backend.git"
+  },
+  "author": "Santanu Sarker",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/santanu23/EmployerInfosessions_Backend/issues"
+  },
+  "homepage": "https://github.com/santanu23/EmployerInfosessions_Backend#readme"
+}
