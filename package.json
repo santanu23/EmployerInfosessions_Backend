@@ -5,7 +5,8 @@
   "main": "scraper.js",
   "dependencies": {
     "express": "^4.14.1",
-    "images-scraper": "^2.0.11"
+    "images-scraper": "^2.0.11",
+	  "async": "^2.1.4"
   },
   "devDependencies": {},
   "scripts": {
