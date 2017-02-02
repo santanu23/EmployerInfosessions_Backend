@@ -15,7 +15,6 @@ app.get('/getImage', function (req, res) {
         detail: false
       })
       .then(function (result) {
-        console.log("Request:" + req.query.employerList); 
         imageUrl = result[0].url;
         console.log(result);
         callback(null, imageUrl);
@@ -32,11 +31,9 @@ app.get('/getImage', function (req, res) {
   });
 });
 
-var server = app.listen(8081, function () {
-  var host = server.address().address
-  var port = server.address().port
-  console.log("Example app listening at http://%s:%s", host, port)
-
+var server = app.listen(process.env.PORT || 8081, function () {
+  var port = server.address().port;
+  console.log("App now running on port", port);
 })
 
 
