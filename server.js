@@ -1,8 +1,11 @@
 var express = require('express');
 var async = require('async');
 var Scraper = require ('images-scraper');
+var cors = require('cors')
 
 var app = express();
+app.use(cors())
+
 let bing = new Scraper.Bing();
 app.get('/getImage', function (req, res) {
   employerList =  req.query.employerList;
