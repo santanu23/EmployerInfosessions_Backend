@@ -6,8 +6,11 @@ var cors = require('cors')
 var app = express();
 app.use(cors())
 
+
 let bing = new Scraper.Bing();
+
 app.get('/getImage', function (req, res) {
+  let counter = 0;
   employerList =  req.query.employerList;
   let calls = [];
   Object.keys(employerList).forEach(function(key) {
@@ -15,12 +18,16 @@ app.get('/getImage', function (req, res) {
         bing.list({
         keyword: employerList[key] + " logo",
         num: 1,
-        detail: false
+        detail: true
       })
       .then(function (result) {
-        imageUrl = result[0].url;
+        console.log(employerList);
         console.log(result);
-        callback(null, imageUrl);
+        imageUrl = result[0].url;
+        //counter is a shared variable between 3 async tasks 
+        //(assumes images are retrieved in the same order they are requested)
+        let returnObject = {employer: employerList[counter++], url: imageUrl}
+        callback(null, returnObject);
       }).catch(function(err) {
         console.log('err',err);
         callback(err);
