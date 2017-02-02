@@ -6,7 +6,8 @@
   "dependencies": {
     "express": "^4.14.1",
     "images-scraper": "^2.0.11",
-	  "async": "^2.1.4"
+	  "async": "^2.1.4",
+    "cors":"^2.8.1"
   },
   "devDependencies": {},
   "scripts": {
