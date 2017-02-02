@@ -2,7 +2,7 @@
   "name": "employer_infosessions_backend",
   "version": "1.0.0",
   "description": "Provides data for info sessions",
-  "main": "scraper.js",
+  "main": "server.js",
   "dependencies": {
     "express": "^4.14.1",
     "images-scraper": "^2.0.11",
